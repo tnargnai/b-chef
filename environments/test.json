@@ -1,6 +1,6 @@
 {
-  "name": "dev",
-  "description": "Development environment",
+  "name": "test",
+  "description": "Test environment",
   "cookbook_versions": {
   },
   "default_attributes": {
