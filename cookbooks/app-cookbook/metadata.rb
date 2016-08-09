@@ -6,6 +6,6 @@ description 'Installs/Configures app-cookbook'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '0.1.0'
 
-depends 'b-nginx'
-depends 'b-goapp'
-depends 'app-helper'
+depends 'b-nginx' '>= 0.1.0'
+depends 'b-goapp' '>= 0.1.0'
+depends 'app-helper' '>= 0.1.0'
