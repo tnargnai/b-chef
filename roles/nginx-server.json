@@ -1,0 +1,9 @@
+{
+  "name": "nginx-server",
+  "description": "Sets up a nginx server",
+  "default_attributes": {
+},
+  "run_list": [
+    "recipe[app-cookbook::nginx]"
+  ]
+}

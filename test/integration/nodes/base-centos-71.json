@@ -1,0 +1,20 @@
+{
+  "id": "base-centos-71",
+  "chef_environment": "local",
+  "automatic": {
+    "ipaddress": [
+      "10.0.2.15",
+      "192.168.33.33"
+    ],
+    "platform": "centos",
+    "fqdn": "base-centos-71",
+    "recipes": [
+      "b-base"
+    ]
+  },
+  "normal": {
+  },
+  "run_list": [
+    "role[base]"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "goapp-server",
+  "description": "Sets up our goapp server",
+  "default_attributes": {
+},
+  "run_list": [
+    "recipe[app-cookbook::goapp]"
+  ]
+}

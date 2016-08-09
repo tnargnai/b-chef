@@ -1,0 +1,17 @@
+{
+  "id": "b-server1-centos-71",
+  "chef_environment": "local",
+  "automatic": {
+    "ipaddress": "192.168.33.34",
+    "platform": "centos",
+    "fqdn": "sb-nginx-server1",
+    "recipes": [
+      "app-cookbook::nginx"
+    ]
+  },
+  "normal": {
+  },
+  "run_list": [
+    "role[nginx-server]"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "base",
+  "description": "The role for all VMs",
+  "default_attributes": {},
+  "run_list": [
+    "recipe[b-base]"
+  ]
+}
