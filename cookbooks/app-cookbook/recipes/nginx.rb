@@ -4,8 +4,6 @@
 #
 # Copyright (c) 2016 Barclays, All Rights Reserved.
 
-app_servers = get_go_app_hostnames
-
 include_recipe 'b-nginx'
 
 # Set service
@@ -21,7 +19,7 @@ template "/etc/nginx/conf.d/default.conf" do
   owner 'root'
   group 'root'
   variables(
-      :app_servers => app_servers,
+      :app_servers => node['b-nginx']['site']['app_servers'],
       :backend_port => node['b-nginx']['site']['backend_port'],
       :domain_name => node['b-nginx']['site']['domain']
   )
