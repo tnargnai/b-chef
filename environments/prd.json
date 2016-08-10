@@ -4,12 +4,14 @@
   "cookbook_versions": {
   },
   "default_attributes": {
-    "b-goapp": {
-      "bin": "https://s3-eu-west-1.amazonaws.com/my-habitat/goapp/web"
-    },
     "b-nginx": {
       "site": {
-        "domain": "webapp.sb.com"
+        "domain": "prd.bci.com",
+        "app_servers": [
+          "192.168.33.132", "192.168.33.133"
+        ],
+        "backend_port": "8484"
+      }
       }
     }
   }
