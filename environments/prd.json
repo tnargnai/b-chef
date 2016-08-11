@@ -11,6 +11,12 @@
           "192.168.33.132", "192.168.33.133"
         ],
         "backend_port": "8484"
+      },
+      "b-goapp": {
+        "webapp": {
+          "user": "vagrant",
+          "group": "vagrant"
+        }
       }
     }
   }

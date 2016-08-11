@@ -12,6 +12,12 @@
         ],
         "backend_port": "8484"
       }
+    },
+    "b-goapp": {
+      "webapp": {
+        "user": "vagrant",
+        "group": "vagrant"
+      }
     }
   }
 }
