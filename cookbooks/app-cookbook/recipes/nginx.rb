@@ -13,8 +13,8 @@ service "nginx" do
 end
 
 # Site Admin
-template "/etc/nginx/conf.d/default.conf" do
-  source 'etc/nginx/conf.d/default.conf.erb'
+template '/etc/nginx/sites-available/webapp.sb.com' do
+  source 'etc/nginx/sites-available/webapp.sb.com.erb'
   mode 0644
   owner 'root'
   group 'root'
