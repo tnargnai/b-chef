@@ -13,8 +13,8 @@ service "nginx" do
 end
 
 # Site Admin
-template '/etc/nginx/sites-available/webapp.sb.com' do
-  source 'etc/nginx/sites-available/webapp.sb.com.erb'
+template "/etc/nginx/sites-available/#{node['b-nginx']['site']['domain']}" do
+  source 'etc/nginx/sites-available/web-conf.erb'
   mode 0644
   owner 'root'
   group 'root'
