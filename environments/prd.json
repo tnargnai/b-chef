@@ -7,16 +7,13 @@
     "b-nginx": {
       "site": {
         "domain": "prd.bci.com",
-        "app_servers": [
-          "192.168.33.132", "192.168.33.133"
-        ],
         "backend_port": "8484"
       }
     },
       "b-goapp": {
         "webapp": {
-          "user": "vagrant",
-          "group": "vagrant"
+          "user": "deployer",
+          "group": "deployer"
         }
       }
     }

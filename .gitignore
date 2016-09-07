@@ -1,0 +1,20 @@
+.rake_test_cache
+
+###
+# Ignore Chef key files and secrets
+###
+.chef
+.vagrant
+.user_vagrant.rb
+.kitchen
+Berksfile.lock
+Gemfile.lock
+
+# Ignore local testing
+environments/local.json
+
+test/integration/nodes
+nodes
+.DS_Store
+.chef-repo.txt
+.chef-vagrant/

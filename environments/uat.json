@@ -1,12 +1,12 @@
 {
-  "name": "test",
-  "description": "Test environment",
+  "name": "uat",
+  "description": "UAT environment",
   "cookbook_versions": {
   },
   "default_attributes": {
     "b-nginx": {
       "site": {
-        "domain": "test.bci.com",
+        "domain": "uat.bci.com",
         "backend_port": "8484"
       }
     },
