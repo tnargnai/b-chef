@@ -14,7 +14,6 @@ Gemfile.lock
 environments/local.json
 
 test/integration/nodes
-nodes
 .DS_Store
 .chef-repo.txt
 .chef-vagrant/
