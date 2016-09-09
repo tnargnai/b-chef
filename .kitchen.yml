@@ -11,7 +11,7 @@ driver_config:
 
 provisioner:
   name: chef_zero
-  name: nodes
+    # name: nodes
   roles_path: roles
   require_chef_omnibus: 12.4.3
   environments_path: environments

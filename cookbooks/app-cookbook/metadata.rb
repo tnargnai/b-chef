@@ -8,4 +8,5 @@ version '0.1.6'
 
 depends 'b-nginx', '>= 0.1.1'
 depends 'b-goapp', '>= 0.1.0'
-depends 'app-helper', '>= 0.1.0'
+depends 'my_provision_aws', '>= 0.1.0'
+depends 'b_helpers', '>= 0.1.0'
