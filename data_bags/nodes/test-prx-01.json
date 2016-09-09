@@ -1,0 +1,26 @@
+{
+  "id": "test-prx-01",
+  "env": "test",
+  "normal": {
+    "tags": null,
+    "chef_provisioning": {
+      "reference": {
+        "driver_version": "1.1.1",
+        "allocated_at": "2015-09-09 10:41:53 UTC",
+        "host_node": "chefzero://localhost:8889/nodes/"
+      },
+      "driver_url": "aws::eu-west-1"
+    }
+  },
+  "aws": {
+    "image_id": "ami-b25725c1",
+    "key_name": "adm",
+    "instance_type": "t2.micro",
+    "sec_groups": [ "sg-3a85815d" ],
+    "subnet": "subnet-9a9bf7fe",
+    "ssh_user": "ubuntu"
+  },
+  "run_list": [
+    "role[nginx-server]"
+  ]
+}
