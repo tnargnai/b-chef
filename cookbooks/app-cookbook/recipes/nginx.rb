@@ -6,6 +6,8 @@
 
 include_recipe 'b-nginx'
 
+app_servers = get_go_app_ips()
+
 # Set service
 service "nginx" do
   supports :status => true, :restart => true, :reload => true
@@ -19,9 +21,10 @@ template "/etc/nginx/sites-available/#{node['b-nginx']['site']['domain']}" do
   owner 'root'
   group 'root'
   variables(
-      :app_servers => node['b-nginx']['site']['app_servers'],
-      :backend_port => node['b-nginx']['site']['backend_port'],
-      :domain_name => node['b-nginx']['site']['domain']
+    # :app_servers => node['b-nginx']['site']['app_servers'],
+    :app_servers => app_servers,
+    :backend_port => node['b-nginx']['site']['backend_port'],
+    :domain_name => node['b-nginx']['site']['domain']
   )
   notifies :restart, "service[nginx]"
 end
