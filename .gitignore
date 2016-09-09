@@ -17,3 +17,4 @@ test/integration/nodes
 .DS_Store
 .chef-repo.txt
 .chef-vagrant/
+environments/local.json
