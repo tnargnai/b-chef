@@ -4,6 +4,6 @@
   "default_attributes": {
 },
   "run_list": [
-    "recipe[app-cookbook::goapp]"
+    "recipe[role_goapp_server]"
   ]
 }

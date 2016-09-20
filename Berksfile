@@ -7,5 +7,4 @@ end
 cookbook 'b-nginx', git: 'git://github.com/tnargnai/b-nginx.git'
 cookbook 'b-goapp', git: 'git://github.com/tnargnai/b-goapp.git'
 cookbook 'b-base', git: 'git://github.com/tnargnai/b-base.git'
-cookbook 'my_provision_aws', git: 'git://github.com/tnargnai/my_provision_aws.git'
 cookbook 'b_helpers', git: 'git://github.com/tnargnai/b_helpers.git'

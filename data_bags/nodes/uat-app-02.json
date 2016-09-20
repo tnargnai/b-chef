@@ -1,6 +1,6 @@
 {
   "id": "uat-app-02",
-  "env": "uat-app-02",
+  "env": "uat",
   "normal": {
     "tags": null,
     "chef_provisioning": {

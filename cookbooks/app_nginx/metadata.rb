@@ -1,11 +1,10 @@
-name 'app-cookbook'
+name 'app_nginx'
 maintainer 'Barclays'
-maintainer_email 'ian.grant@barclays.com'
+maintainer_email 'ian.grant@barclayscorp.com'
 license 'all_rights'
-description 'Installs/Configures app-cookbook'
+description 'Installs/Configures app_nginx'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.1.6'
+version '0.1.0'
 
 depends 'b-nginx', '>= 0.1.1'
-depends 'b-goapp', '>= 0.1.0'
 depends 'b_helpers', '>= 0.1.0'

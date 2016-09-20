@@ -4,6 +4,6 @@
   "default_attributes": {
 },
   "run_list": [
-    "recipe[app-cookbook::nginx]"
+    "recipe[role_nginx_server]"
   ]
 }
