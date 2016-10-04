@@ -2,19 +2,7 @@
   "name": "prd",
   "description": "Production environment",
   "cookbook_versions": {
+    "role_goapp_server": "= 0.1.0",
+    "role_nginx_server": "= 0.1.0"
   },
-  "default_attributes": {
-    "b-nginx": {
-      "site": {
-        "domain": "prd.bci.com",
-        "backend_port": "8484"
-      }
-    },
-      "b-goapp": {
-        "webapp": {
-          "user": "deployer",
-          "group": "deployer"
-        }
-      }
-    }
-}
+  "default_attributes": {}
