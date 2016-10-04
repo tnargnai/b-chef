@@ -1,6 +1,10 @@
 case node.chef_environment
 when 'local', 'docker'
-  # attributes
+  default['b-nginx']['site']['domain'] = 'local.bci.com'
+  default['b-nginx']['site']['app_servers'] = [
+    '192.168.33.64',
+    '192.168.33.65',
+    ]
 when 'test'
   default['b-nginx']['site']['domain'] = 'test.bci.com'
   default['b-nginx']['site']['app_servers'] = [

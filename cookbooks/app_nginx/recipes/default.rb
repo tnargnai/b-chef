@@ -6,7 +6,7 @@
 
 include_recipe 'b-nginx'
 
-app_servers = get_ips_by_role('goapp-server')
+app_servers = node['b-nginx']['site']['app_servers']
 
 # Set service
 service "nginx" do
