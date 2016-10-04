@@ -1,5 +1,6 @@
 case node.chef_environment
 when 'local', 'docker'
+  # Local testing is done with Vagrant and Virtual Box
   default['b-nginx']['site']['domain'] = 'local.bci.com'
   default['b-nginx']['site']['app_servers'] = [
     '192.168.33.64',
