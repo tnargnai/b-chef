@@ -9,8 +9,8 @@ when 'local', 'docker'
 when 'test'
   default['b-nginx']['site']['domain'] = 'test.bci.com'
   default['b-nginx']['site']['app_servers'] = [
-    '10.0.1.25',
-    '10.0.1.125',
+    '192.168.33.122',
+    '192.168.33.123'
     ]
   default['b-nginx']['site']['backend_port'] = '8484'
 when 'uat'
@@ -23,8 +23,8 @@ when 'uat'
 when 'prd'
   default['b-nginx']['site']['domain'] = 'bci.com'
   default['b-nginx']['site']['app_servers'] = [
-    '10.0.1.202',
-    '10.0.1.48',
+    '192.168.33.132',
+    '192.168.33.133'
     ]
   default['b-nginx']['site']['backend_port'] = '8484'
 end
