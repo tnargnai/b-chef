@@ -15,7 +15,7 @@ service "nginx" do
 end
 
 # Site Admin
-template "/etc/nginx/sites-available/#{node['b-nginx']['site']['domain']}" do
+template "/etc/nginx/sites-enabled/#{node['b-nginx']['site']['domain']}" do
   source 'etc/nginx/sites-available/web-conf.erb'
   mode 0644
   owner 'root'
