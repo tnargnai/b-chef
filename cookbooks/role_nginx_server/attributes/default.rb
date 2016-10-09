@@ -21,7 +21,7 @@ when 'uat'
     ]
   default['b-nginx']['site']['backend_port'] = '8484'
 when 'prd'
-  default['b-nginx']['site']['domain'] = 'bci.com'
+  default['b-nginx']['site']['domain'] = 'prd.bci.com'
   default['b-nginx']['site']['app_servers'] = [
     '192.168.33.132',
     '192.168.33.133'
