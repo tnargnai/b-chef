@@ -19,7 +19,7 @@ provisioner:
   #encrypted_data_bag_secret_key_path: "site-cookbooks/sb-secret/files/default/"
   cookbook_path: ["cookbooks"]
   client_rb:
-    environment: local
+    # environment: local
 
 verifier:
   name: inspec
