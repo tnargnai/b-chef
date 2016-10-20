@@ -50,8 +50,7 @@ suites:
       - role[nginx-server]
     verifier:
       inspec_tests:
-        # - cookbooks/app_nginx/test/recipes
-        - https://github.com/dev-sec/tests-os-hardening
+        - cookbooks/app_nginx/test/recipes
         - https://github.com/dev-sec/tests-ssh-hardening
     attributes: {}
     nodes_path: test/nodes
@@ -63,7 +62,14 @@ suites:
     verifier:
       inspec_tests:
         - cookbooks/app_goapp/test/recipes
-    attributes: {}
+        - https://github.com/dev-sec/tests-ssh-hardening
+    attributes: {
+      b-goapp: {
+        webapp: {
+          user: 'root'
+          }
+        }
+      }
     nodes_path: test/nodes
 
 

@@ -12,8 +12,7 @@ Gemfile.lock
 
 # Ignore local testing
 environments/local.json
-
-test/integration/nodes
+bin
 nodes
 .DS_Store
 .chef-repo.txt
