@@ -36,6 +36,11 @@ suites:
   - name: base
     run_list:
       - role[base]
+    verifier:
+      inspec_tests:
+        - test/recipes
+        - https://github.com/dev-sec/tests-os-hardening
+        - https://github.com/dev-sec/tests-ssh-hardening
     attributes: {}
     nodes_path: test/nodes
 

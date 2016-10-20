@@ -3,6 +3,7 @@
   "description": "The role for all VMs",
   "default_attributes": {},
   "run_list": [
-    "recipe[b-base]"
+    "recipe[b-base]",
+    "recipe[b_hardening]"
   ]
 }
