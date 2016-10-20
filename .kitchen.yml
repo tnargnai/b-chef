@@ -33,16 +33,16 @@ platforms:
 
 suites:
 ###### Single servers ######
-  - name: base
-    run_list:
-      - role[base]
-    verifier:
-      inspec_tests:
-        - test/recipes
-        - https://github.com/dev-sec/tests-os-hardening
-        - https://github.com/dev-sec/tests-ssh-hardening
-    attributes: {}
-    nodes_path: test/nodes
+  # - name: base
+  #   run_list:
+  #     - role[base]
+  #   verifier:
+  #     inspec_tests:
+  #       - test/recipes
+  #       - https://github.com/dev-sec/tests-os-hardening
+  #       - https://github.com/dev-sec/tests-ssh-hardening
+  #   attributes: {}
+  #   nodes_path: test/nodes
 
   - name: nginx-server
     run_list:
@@ -50,7 +50,9 @@ suites:
       - role[nginx-server]
     verifier:
       inspec_tests:
-        - cookbooks/app_nginx/test/recipes
+        # - cookbooks/app_nginx/test/recipes
+        - https://github.com/dev-sec/tests-os-hardening
+        - https://github.com/dev-sec/tests-ssh-hardening
     attributes: {}
     nodes_path: test/nodes
 
@@ -64,35 +66,36 @@ suites:
     attributes: {}
     nodes_path: test/nodes
 
-###### SB binary webapp servers ######
-  - name: b-server1
-    driver:
-      ipaddress: 192.168.33.34
-      vagrantfile_erb: test/integration/Vagrantfile.erb
-      vm_hostname: sb-nginx-server1
-    run_list:
-      - role[nginx-server]
-    attributes: {}
-    nodes_path: test/nodes
 
-  - name: b-server2
-    driver:
-      ipaddress: 192.168.33.35
-      vagrantfile_erb: test/integration/Vagrantfile.erb
-      vm_hostname: sb-goapp-server1
-    run_list:
-      - role[base]
-      - role[goapp-server]
-    attributes: {}
-    nodes_path: test/nodes
-
-  - name: b-server3
-    driver:
-      ipaddress: 192.168.33.36
-      vagrantfile_erb: test/integration/Vagrantfile.erb
-      vm_hostname: sb-goapp-server2
-    run_list:
-      - role[base]
-      - role[goapp-server]
-    attributes: {}
-    nodes_path: test/nodes
+# ###### SB binary webapp servers ######
+#   - name: b-server1
+#     driver:
+#       ipaddress: 192.168.33.34
+#       vagrantfile_erb: test/integration/Vagrantfile.erb
+#       vm_hostname: sb-nginx-server1
+#     run_list:
+#       - role[nginx-server]
+#     attributes: {}
+#     nodes_path: test/nodes
+#
+#   - name: b-server2
+#     driver:
+#       ipaddress: 192.168.33.35
+#       vagrantfile_erb: test/integration/Vagrantfile.erb
+#       vm_hostname: sb-goapp-server1
+#     run_list:
+#       - role[base]
+#       - role[goapp-server]
+#     attributes: {}
+#     nodes_path: test/nodes
+#
+#   - name: b-server3
+#     driver:
+#       ipaddress: 192.168.33.36
+#       vagrantfile_erb: test/integration/Vagrantfile.erb
+#       vm_hostname: sb-goapp-server2
+#     run_list:
+#       - role[base]
+#       - role[goapp-server]
+#     attributes: {}
+#     nodes_path: test/nodes
