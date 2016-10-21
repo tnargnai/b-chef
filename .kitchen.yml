@@ -18,8 +18,8 @@ provisioner:
   data_bags_path: data_bags
   #encrypted_data_bag_secret_key_path: "site-cookbooks/sb-secret/files/default/"
   cookbook_path: ["cookbooks"]
-  client_rb:
-    # environment: local
+  # client_rb:
+  #   environment: local
 
 verifier:
   name: inspec
@@ -33,16 +33,15 @@ platforms:
 
 suites:
 ###### Single servers ######
-  # - name: base
-  #   run_list:
-  #     - role[base]
-  #   verifier:
-  #     inspec_tests:
-  #       - test/recipes
-  #       - https://github.com/dev-sec/tests-os-hardening
-  #       - https://github.com/dev-sec/tests-ssh-hardening
-  #   attributes: {}
-  #   nodes_path: test/nodes
+  - name: base
+    run_list:
+      - role[base]
+    verifier:
+      inspec_tests:
+        - test/recipes
+        - https://github.com/dev-sec/tests-ssh-hardening
+    attributes: {}
+    nodes_path: test/nodes
 
   - name: nginx-server
     run_list:
