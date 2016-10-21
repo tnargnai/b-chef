@@ -6,12 +6,12 @@
 
 include_recipe 'b-nginx'
 
-app_servers = node['b-nginx']['site']['app_servers']
+# app_servers = node['b-nginx']['site']['app_servers']
 
 # Set service
-service "nginx" do
-  supports :status => true, :restart => true, :reload => true
-  action [ :enable ]
+service 'nginx' do
+  supports status: 'true', restart: 'true', reload: 'true'
+  action [:enable]
 end
 
 # Site Admin
@@ -22,9 +22,9 @@ template "/etc/nginx/sites-enabled/#{node['b-nginx']['site']['domain']}" do
   group 'root'
   variables(
     # :app_servers => node['b-nginx']['site']['app_servers'],
-    :app_servers => app_servers,
-    :backend_port => node['b-nginx']['site']['backend_port'],
-    :domain_name => node['b-nginx']['site']['domain']
+    app_servers: node['b-nginx']['site']['app_servers'],
+    backend_port: node['b-nginx']['site']['backend_port'],
+    domain_name: node['b-nginx']['site']['domain']
   )
-  notifies :restart, "service[nginx]"
+  notifies :restart, 'service[nginx]'
 end

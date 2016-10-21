@@ -3,4 +3,4 @@
 # Recipe:: default
 #
 
-include_recipe "app_nginx::default"
+include_recipe 'app_nginx::default'
